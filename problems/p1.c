@@ -1,10 +1,20 @@
 #include <stdio.h>
 
-int main(){
-    for(int i=1;i<=5;i++){
-        for(int j=1;j<=5;j++){
-            printf("%d ", i);
+int main() {
+    int rows = 7;
+    int k = 0;
+
+    for (int i = 1; i <= rows; i++, k = 0) {
+        for (int space = 1; space <= rows - i; space++) {
+            printf(" ");
         }
+
+        while (k != 2 * i - 1) {
+            printf("*");
+            k++;
+        }
+
         printf("\n");
     }
+    return 0;
 }
